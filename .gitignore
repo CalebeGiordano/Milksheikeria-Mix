@@ -1,0 +1,21 @@
+# Arquivos gerados pelo sistema operacional
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Configurações de editor
+.vscode/
+.idea/
+
+# Arquivos temporários de testes
+_test.html
+_semear.html
+_preview.html
+_shot.html
+
+# Dependências (o projeto não usa, mas evita commit acidental)
+node_modules/
+
+# Backups baixados pelo painel administrativo
+backup-milkshakemix-*.json

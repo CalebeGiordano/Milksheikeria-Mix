@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="assets/img/logo.png" />
+    <link rel="apple-touch-icon" href="assets/img/logo.png" />
+
+    <title>Milk Shake Mix — Milkshakes Cremosos, Sorvetes e Açaí em Itapoã, Brasília</title>
+    <meta
+      name="description"
+      content="Milk Shake Mix: milkshakes cremosos, açaís caprichados e sorvetes feitos na hora em Itapoã, Brasília. Monte seu Mix do seu jeito e peça pelo WhatsApp."
+    />
+    <meta name="theme-color" content="#2D0A31" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Milk Shake Mix — Sorvetes e Açaí em Itapoã, Brasília" />
+    <meta
+      property="og:description"
+      content="Milkshakes cremosos, açaís caprichados e sorvetes que transformam qualquer vontade de doce em um momento inesquecível."
+    />
+    <meta property="og:image" content="https://calebegiordano.github.io/Milksheikeria-Mix/assets/img/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Milk Shake Mix" />
+
+    <link rel="stylesheet" href="assets/css/tailwind.css" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+
+    <!-- Dados estruturados: ajudam o Google a mostrar endereço, horário e nota
+         nos resultados de busca e no Maps. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "IceCreamShop",
+        "name": "Milk Shake Mix",
+        "image": "https://calebegiordano.github.io/Milksheikeria-Mix/assets/img/og-image.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Del Lago Q 15 Lote 03",
+          "addressLocality": "Itapoã, Brasília",
+          "addressRegion": "DF",
+          "postalCode": "71581-115",
+          "addressCountry": "BR"
+        },
+        "telephone": "+5561991169687",
+        "servesCuisine": ["Sorvetes", "Açaí", "Milkshakes", "Salgados"],
+        "priceRange": "$$",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.4",
+          "reviewCount": "148"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "10:00",
+            "closes": "18:00"
+          }
+        ],
+        "url": "https://calebegiordano.github.io/Milksheikeria-Mix/",
+        "sameAs": ["https://www.instagram.com/milkshakemixitapoa_df"]
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="min-h-screen overflow-x-hidden bg-[#FDF9F2] antialiased">
+      <!-- Atalho para quem navega por teclado -->
+      <a
+        href="#cardapio"
+        class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[70] focus:rounded-full focus:bg-[#FF008A] focus:px-5 focus:py-3 focus:text-sm focus:font-bold focus:text-white"
+        >Pular para o cardápio</a
+      >
+
+      <!-- ================================================================
+           CABEÇALHO
+           ================================================================ -->
+      <header
+        id="site-header"
+        class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent py-5"
+      >
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8">
+          <a href="#inicio" class="flex items-center gap-3">
+            <img
+              src="assets/img/logo.png"
+              alt="Logo Milk Shake Mix"
+              width="44"
+              height="44"
+              class="h-11 w-11 rounded-full object-cover ring-2 ring-[#FFD600]/70"
+            />
+            <span
+              class="hidden text-[15px] font-semibold leading-tight tracking-tight text-white sm:block"
+              >Milk Shake Mix<span
+                class="block text-[11px] font-normal uppercase tracking-[0.2em] text-[#FFD600]"
+                >Sorvetes • Açaí</span
+              ></span
+            >
+          </a>
+
+          <nav class="hidden items-center gap-1 lg:flex" aria-label="Menu principal">
+            <a
+              href="#inicio"
+              class="rounded-full px-4 py-2 text-sm font-medium text-white/85 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFD600]"
+              >Início</a
+            >
+            <a
+              href="#cardapio"
+              class="rounded-full px-4 py-2 text-sm font-medium text-white/85 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFD600]"
+              >Cardápio</a
+            >
+            <a
+              href="#a-mix"
+              class="rounded-full px-4 py-2 text-sm font-medium text-white/85 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFD600]"
+              >A Mix</a
+            >
+            <a
+              href="#galeria"
+              class="rounded-full px-4 py-2 text-sm font-medium text-white/85 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFD600]"
+              >Galeria</a
+            >
+            <a
+              href="#avaliacoes"
+              class="rounded-full px-4 py-2 text-sm font-medium text-white/85 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFD600]"
+              >Avaliações</a
+            >
+            <a
+              href="#contato"
+              class="rounded-full px-4 py-2 text-sm font-medium text-white/85 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFD600]"
+              >Contato</a
+            >
+          </nav>
+
+          <div class="flex items-center gap-2">
+            <a
+              href="#cardapio"
+              class="hidden items-center gap-2 rounded-full bg-[#FF008A] px-6 py-3 text-[13px] font-bold uppercase tracking-wider text-white shadow-lg shadow-[#FF008A]/30 transition-transform hover:scale-[1.04] sm:inline-flex"
+              >Ver cardápio
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-4 w-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+            <button
+              id="menu-toggle"
+              aria-label="Abrir menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+              class="inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur lg:hidden"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu h-5 w-5"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Menu mobile -->
+        <div
+          id="mobile-menu"
+          hidden
+          class="mx-4 mt-3 overflow-hidden rounded-3xl border border-white/10 bg-[#2D0A31]/95 p-4 backdrop-blur-xl lg:hidden"
+        >
+          <a href="#inicio" class="block rounded-2xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/10">Início</a>
+          <a href="#cardapio" class="block rounded-2xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/10">Cardápio</a>
+          <a href="#a-mix" class="block rounded-2xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/10">A Mix</a>
+          <a href="#galeria" class="block rounded-2xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/10">Galeria</a>
+          <a href="#avaliacoes" class="block rounded-2xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/10">Avaliações</a>
+          <a href="#contato" class="block rounded-2xl px-4 py-3 text-base font-medium text-white/90 hover:bg-white/10">Contato</a>
+          <a
+            href="#cardapio"
+            class="mt-2 flex items-center justify-center gap-2 rounded-2xl bg-[#FF008A] px-6 py-4 text-sm font-bold uppercase tracking-wider text-white"
+            >Ver cardápio
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-4 w-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+        </div>
+      </header>
+
+      <main>
+        <!-- ==============================================================
+             HERO
+             ============================================================== -->
+        <section id="inicio" class="relative overflow-hidden bg-[#2D0A31] pt-32 pb-20 sm:pt-40 lg:pb-28">
+          <div class="pointer-events-none absolute -left-32 top-10 h-96 w-96 rounded-full bg-[#9D00FF]/30 blur-3xl"></div>
+          <div class="pointer-events-none absolute -right-24 bottom-0 h-[28rem] w-[28rem] rounded-full bg-[#FF008A]/25 blur-3xl"></div>
+
+          <div class="relative mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[1fr_1.15fr] lg:gap-12">
+            <div class="hero-text">
+              <span
+                class="inline-block rounded-full border border-[#FFD600]/40 bg-[#FFD600]/10 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.25em] text-[#FFD600]"
+                >Sorvetes • Açaí • Milkshakes</span
+              >
+              <h1 class="mt-7 text-[clamp(2.6rem,7vw,4.75rem)] font-extrabold leading-[0.98] tracking-[-0.035em] text-white">
+                O lado mais
+                <span class="relative inline-block text-[#FF008A]"
+                  >gostoso<svg class="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 12" fill="none" aria-hidden="true"><path d="M2 9C40 3 160 3 198 9" stroke="#FFD600" stroke-width="4" stroke-linecap="round"></path></svg
+                ></span>
+                do seu dia.
+              </h1>
+              <p class="mt-8 max-w-xl text-[17px] leading-relaxed text-white/75">Milkshakes cremosos, açaís caprichados e sorvetes que transformam qualquer vontade de doce em um momento inesquecível.</p>
+
+              <div class="mt-10 flex flex-wrap gap-4">
+                <a
+                  href="#montar"
+                  class="group inline-flex items-center gap-3 rounded-full bg-[#FF008A] px-8 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-xl shadow-[#FF008A]/35 transition-transform hover:scale-[1.04]"
+                  >Quero meu Mix<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-4 w-4 transition-transform group-hover:translate-x-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg
+                ></a>
+                <a
+                  href="#a-mix"
+                  class="inline-flex items-center gap-2 rounded-full border border-white/25 px-8 py-4 text-sm font-bold uppercase tracking-wider text-white transition-colors hover:border-[#FFD600] hover:text-[#FFD600]"
+                  >Conheça a Mix</a
+                >
+              </div>
+
+              <div class="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4 text-sm text-white/70">
+                <div class="flex items-center gap-2">
+                  <div class="flex text-[#FFD600]" data-stars="5" data-star-class="h-4 w-4"></div>
+                  <span class="font-semibold text-white" data-loja="nota">4.4</span>
+                </div>
+                <span class="h-4 w-px bg-white/20"></span>
+                <span><span data-loja="totalAvaliacoes">148</span> avaliações no Google</span>
+              </div>
+            </div>
+
+            <div class="relative mx-auto w-full max-w-[440px] sm:max-w-[520px] hero-media">
+              <div class="pointer-events-none absolute -inset-6 rounded-[48%_52%_50%_50%/52%_48%_52%_48%] bg-gradient-to-br from-[#FF008A] via-[#9D00FF] to-[#FFD600] opacity-70 blur-2xl"></div>
+              <div class="relative z-10 aspect-[3/4] overflow-hidden rounded-[2.25rem] shadow-[0_50px_100px_-30px_rgba(0,0,0,0.8)] ring-1 ring-white/10">
+                <video
+                  src="assets/video/milkshake-montagem-8s.mp4"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  class="h-full w-full object-cover"
+                  aria-label="Montagem de milkshake cremoso da Milk Shake Mix"
+                ></video>
+                <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#2D0A31]/40 via-transparent to-transparent"></div>
+              </div>
+
+              <div class="absolute -left-3 top-8 z-20 rounded-2xl bg-[#FFD600] px-4 py-2 text-[11px] font-extrabold uppercase tracking-wider text-[#2D0A31] shadow-xl sm:-left-8 float-badge">
+                Best Seller
+              </div>
+
+              <div class="absolute -right-3 top-1/3 z-20 rounded-2xl border border-white/20 bg-white/15 px-4 py-3 backdrop-blur-md sm:-right-8 float-badge float-badge-delay">
+                <div class="flex text-[#FFD600]" data-stars="5" data-star-class="h-3.5 w-3.5"></div>
+                <p class="mt-1 text-xs font-semibold text-white"><span data-loja="nota">4.4</span> de nota</p>
+              </div>
+
+              <div class="absolute -bottom-5 left-1/2 z-20 -translate-x-1/2 rounded-2xl bg-white px-6 py-3.5 shadow-2xl float-badge-centered">
+                <p class="text-lg font-extrabold leading-none text-[#2D0A31]" data-loja="totalAvaliacoes">148</p>
+                <p class="text-[11px] font-semibold uppercase tracking-wider text-[#FF008A]">avaliações Google</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============================================================
+             FAIXA DE SABORES (marquee)
+             ============================================================== -->
+        <div class="relative overflow-hidden border-y border-[#2D0A31]/10 bg-[#2D0A31] py-5">
+          <div class="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-[#2D0A31] to-transparent"></div>
+          <div class="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-[#2D0A31] to-transparent"></div>
+          <!-- Preenchido por JS a partir de SABORES_FAIXA (em data.js) -->
+          <div id="marquee" class="flex w-max animate-[marquee_28s_linear_infinite] items-center gap-8" aria-hidden="true"></div>
+        </div>
+
+        <!-- ==============================================================
+             FAIXA DE DIFERENCIAIS
+             ============================================================== -->
+        <section class="relative z-10 -mt-10 px-5 sm:px-8">
+          <div class="mx-auto grid max-w-6xl gap-4 rounded-[2rem] border border-[#2D0A31]/10 bg-white p-6 shadow-[0_30px_60px_-40px_rgba(45,10,49,0.55)] sm:grid-cols-3 sm:p-8">
+            <div class="reveal">
+              <div class="flex items-start gap-4">
+                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#FF008A] to-[#9D00FF] text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-timer h-5 w-5"><line x1="10" x2="14" y1="2" y2="2"></line><line x1="12" x2="15" y1="14" y2="11"></line><circle cx="12" cy="14" r="8"></circle></svg>
+                </div>
+                <div>
+                  <p class="text-[12px] font-extrabold uppercase tracking-[0.14em] text-[#2D0A31]">Feito na hora</p>
+                  <p class="mt-1 text-sm text-[#2D0A31]/65">Mais cremosidade em cada pedido.</p>
+                </div>
+              </div>
+            </div>
+            <div class="reveal" style="--reveal-delay: 0.1s">
+              <div class="flex items-start gap-4">
+                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#FF008A] to-[#9D00FF] text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-leaf h-5 w-5"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>
+                </div>
+                <div>
+                  <p class="text-[12px] font-extrabold uppercase tracking-[0.14em] text-[#2D0A31]">Ingredientes selecionados</p>
+                  <p class="mt-1 text-sm text-[#2D0A31]/65">Qualidade que dá para sentir.</p>
+                </div>
+              </div>
+            </div>
+            <div class="reveal" style="--reveal-delay: 0.2s">
+              <div class="flex items-start gap-4">
+                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#FF008A] to-[#9D00FF] text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles h-5 w-5"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path><path d="M20 3v4"></path><path d="M22 5h-4"></path><path d="M4 17v2"></path><path d="M5 18H3"></path></svg>
+                </div>
+                <div>
+                  <p class="text-[12px] font-extrabold uppercase tracking-[0.14em] text-[#2D0A31]">Seu jeito, seu Mix</p>
+                  <p class="mt-1 text-sm text-[#2D0A31]/65">Monte como você gosta.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============================================================
+             CARDÁPIO
+             ============================================================== -->
+        <section id="cardapio" class="bg-[#FDF9F2] py-24 sm:py-32">
+          <div class="mx-auto max-w-7xl px-5 sm:px-8">
+            <div class="mx-auto max-w-2xl text-center reveal">
+              <p class="text-[11px] font-extrabold uppercase tracking-[0.3em] text-[#9D00FF]">Cardápio</p>
+              <h2 class="mt-4 text-[clamp(2rem,5vw,3.25rem)] font-extrabold leading-tight tracking-[-0.03em] text-[#2D0A31]">
+                Escolha sua felicidade.
+              </h2>
+              <p class="mt-5 text-[17px] leading-relaxed text-[#2D0A31]/65">
+                Favoritos da casa para você pedir sem pensar duas vezes. E sim, você pode personalizar.
+              </p>
+            </div>
+
+            <div class="mt-10 reveal">
+              <div id="filtros" class="flex flex-wrap justify-center gap-2.5" role="group" aria-label="Filtrar cardápio por categoria"></div>
+            </div>
+
+            <div id="grade-produtos" class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"></div>
+
+            <div class="reveal">
+              <div class="relative mt-16 overflow-hidden rounded-[2.5rem] bg-[#2D0A31] px-8 py-12 sm:px-14 sm:py-14">
+                <div class="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-[#FF008A]/30 blur-3xl"></div>
+                <div class="pointer-events-none absolute -bottom-20 left-10 h-56 w-56 rounded-full bg-[#FFD600]/20 blur-3xl"></div>
+                <div class="relative flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
+                  <div>
+                    <h3 class="text-[clamp(1.75rem,4vw,2.75rem)] font-extrabold leading-tight tracking-[-0.03em] text-white">
+                      Quer criar do seu jeito?
+                    </h3>
+                    <p class="mt-3 text-[17px] text-white/70">Escolha o tamanho, sabores e complementos.</p>
+                  </div>
+                  <a
+                    href="#montar"
+                    class="group inline-flex shrink-0 items-center gap-3 rounded-full bg-[#FF008A] px-8 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-xl shadow-[#FF008A]/30 transition-transform hover:scale-105"
+                    >Montar meu pedido<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-4 w-4 transition-transform group-hover:translate-x-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============================================================
+             A MIX
+             ============================================================== -->
+        <section id="a-mix" class="relative overflow-hidden bg-white py-24 sm:py-32">
+          <div class="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-2">
+            <div class="relative order-2 lg:order-1 reveal">
+              <div class="absolute -left-6 -top-6 h-40 w-40 rounded-full bg-[#FFD600]/40 blur-2xl"></div>
+              <div class="absolute -bottom-8 right-4 h-48 w-48 rounded-[45%_55%_50%_50%/50%_45%_55%_50%] bg-[#FF008A]/25 blur-2xl"></div>
+              <img
+                src="assets/img/galeria/g1-interior.jpeg"
+                alt="Interior da loja Milk Shake Mix"
+                loading="lazy"
+                decoding="async"
+                width="1200"
+                height="1600"
+                class="relative aspect-[4/5] w-full rounded-[2.5rem] object-cover shadow-[0_40px_80px_-40px_rgba(45,10,49,0.55)]"
+              />
+              <div class="absolute -bottom-6 -left-2 rounded-3xl bg-[#2D0A31] px-6 py-5 shadow-2xl sm:left-6">
+                <p class="text-3xl font-extrabold leading-none text-[#FFD600]">100%</p>
+                <p class="mt-1 text-[11px] font-bold uppercase tracking-[0.18em] text-white/80">feito na hora</p>
+              </div>
+            </div>
+
+            <div class="order-1 lg:order-2">
+              <div class="reveal">
+                <p class="text-[11px] font-extrabold uppercase tracking-[0.3em] text-[#9D00FF]">A Mix</p>
+                <h2 class="mt-4 text-[clamp(2rem,5vw,3.25rem)] font-extrabold leading-tight tracking-[-0.03em] text-[#2D0A31]">
+                  Não é só um doce. <span class="text-[#FF008A]">É seu momento.</span>
+                </h2>
+                <p class="mt-6 text-[17px] leading-relaxed text-[#2D0A31]/65">A gente acredita que as melhores memórias vêm acompanhadas de algo gostoso. Por isso, cada pedido é preparado com carinho, capricho e aquele toque divertido que é a cara da Mix.</p>
+              </div>
+
+              <div class="mt-10 space-y-5">
+                <div class="reveal" style="--reveal-delay: 0.1s">
+                  <div class="flex gap-5 rounded-3xl border border-[#2D0A31]/8 bg-[#FDF9F2] p-5 transition-colors hover:border-[#9D00FF]/40">
+                    <span class="text-xl font-extrabold text-[#FF008A]">01</span>
+                    <div>
+                      <p class="text-[13px] font-extrabold uppercase tracking-[0.14em] text-[#2D0A31]">Capricho de verdade</p>
+                      <p class="mt-1.5 text-sm text-[#2D0A31]/65">Montagem bonita e generosa em todos os pedidos.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="reveal" style="--reveal-delay: 0.2s">
+                  <div class="flex gap-5 rounded-3xl border border-[#2D0A31]/8 bg-[#FDF9F2] p-5 transition-colors hover:border-[#9D00FF]/40">
+                    <span class="text-xl font-extrabold text-[#FF008A]">02</span>
+                    <div>
+                      <p class="text-[13px] font-extrabold uppercase tracking-[0.14em] text-[#2D0A31]">Sabores para todo mundo</p>
+                      <p class="mt-1.5 text-sm text-[#2D0A31]/65">Do chocolate clássico ao açaí cheio de complementos.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="reveal" style="--reveal-delay: 0.3s">
+                  <div class="flex gap-5 rounded-3xl border border-[#2D0A31]/8 bg-[#FDF9F2] p-5 transition-colors hover:border-[#9D00FF]/40">
+                    <span class="text-xl font-extrabold text-[#FF008A]">03</span>
+                    <div>
+                      <p class="text-[13px] font-extrabold uppercase tracking-[0.14em] text-[#2D0A31]">Seu pedido, seu jeito</p>
+                      <p class="mt-1.5 text-sm text-[#2D0A31]/65">Personalize e transforme o cardápio em seu próprio Mix.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============================================================
+             GALERIA — "Conheça nossa casa"
+             ============================================================== -->
+        <section id="galeria" class="relative overflow-hidden bg-[#FDF9F2] py-24 sm:py-32">
+          <div class="pointer-events-none absolute -right-16 top-20 h-72 w-72 rounded-full bg-[#FFD600]/30 blur-3xl"></div>
+          <div class="pointer-events-none absolute -left-16 bottom-10 h-72 w-72 rounded-full bg-[#FF008A]/15 blur-3xl"></div>
+
+          <div class="relative mx-auto max-w-7xl px-5 sm:px-8">
+            <div class="text-center reveal">
+              <p class="inline-flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.3em] text-[#9D00FF]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-camera h-4 w-4"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path><circle cx="12" cy="13" r="3"></circle></svg>
+                Galeria
+              </p>
+              <h2 class="mt-4 text-[clamp(2rem,5vw,3.25rem)] font-extrabold leading-tight tracking-[-0.03em] text-[#2D0A31]">
+                Conheça nossa <span class="text-[#FF008A]">casa</span>
+              </h2>
+              <p class="mx-auto mt-4 max-w-xl text-[17px] text-[#2D0A31]/65">Um cantinho colorido e cheio de sabor, feito pra você se deliciar do primeiro ao último detalhe.</p>
+            </div>
+
+            <!-- Preenchido por JS a partir de GALERIA (em data.js) -->
+            <div
+              id="grade-galeria"
+              class="mt-12 grid auto-rows-[180px] grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4 lg:auto-rows-[220px]"
+            ></div>
+          </div>
+        </section>
+
+        <!-- ==============================================================
+             MONTE SEU MIX
+             ============================================================== -->
+        <section id="montar" class="relative overflow-hidden bg-[#2D0A31] py-24 sm:py-32">
+          <div class="pointer-events-none absolute -left-20 top-24 h-80 w-80 rounded-full bg-[#9D00FF]/30 blur-3xl"></div>
+          <div class="pointer-events-none absolute -right-20 bottom-10 h-80 w-80 rounded-full bg-[#FF008A]/25 blur-3xl"></div>
+
+          <div class="relative mx-auto max-w-6xl px-5 sm:px-8">
+            <div class="text-center reveal">
+              <p class="text-[11px] font-extrabold uppercase tracking-[0.3em] text-[#FFD600]">Personalize</p>
+              <h2 class="mt-4 text-[clamp(2rem,5vw,3.25rem)] font-extrabold leading-tight tracking-[-0.03em] text-white">Monte seu Mix</h2>
+              <p class="mx-auto mt-4 max-w-xl text-[17px] text-white/70">Escolha a base, o sabor, o tamanho e capriche nos acompanhamentos. Do seu jeito, do zero ao último detalhe.</p>
+            </div>
+
+            <div class="mt-12 grid gap-6 lg:grid-cols-[1.4fr_1fr]">
+              <!-- Passos -->
+              <div class="reveal">
+                <div class="rounded-[2.5rem] border border-white/12 bg-white/[0.06] p-6 backdrop-blur-xl sm:p-9">
+                  <div class="space-y-9">
+                    <div>
+                      <div class="flex items-center gap-3">
+                        <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#FFD600] text-sm font-extrabold text-[#2D0A31] shadow-lg shadow-[#FFD600]/20">1</span>
+                        <div>
+                          <p class="text-[12px] font-extrabold uppercase tracking-[0.2em] text-white">Base</p>
+                          <p class="mt-0.5 text-[11px] text-white/45">Onde começa a mágica</p>
+                        </div>
+                      </div>
+                      <div class="mt-4">
+                        <div id="mix-bases" class="grid gap-3 sm:grid-cols-3"></div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="flex items-center gap-3">
+                        <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#FFD600] text-sm font-extrabold text-[#2D0A31] shadow-lg shadow-[#FFD600]/20">2</span>
+                        <div>
+                          <p class="text-[12px] font-extrabold uppercase tracking-[0.2em] text-white">Sabor do sorvete</p>
+                          <p class="mt-0.5 text-[11px] text-white/45">Escolha 1 sabor</p>
+                        </div>
+                      </div>
+                      <div class="mt-4">
+                        <div id="mix-sabores" class="grid grid-cols-2 gap-3 sm:grid-cols-3"></div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="flex items-center gap-3">
+                        <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#FFD600] text-sm font-extrabold text-[#2D0A31] shadow-lg shadow-[#FFD600]/20">3</span>
+                        <div>
+                          <p class="text-[12px] font-extrabold uppercase tracking-[0.2em] text-white">Tamanho</p>
+                          <p class="mt-0.5 text-[11px] text-white/45">Quanto você aguenta</p>
+                        </div>
+                      </div>
+                      <div class="mt-4">
+                        <div id="mix-tamanhos" class="grid gap-3 sm:grid-cols-3"></div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="flex items-center gap-3">
+                        <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#FFD600] text-sm font-extrabold text-[#2D0A31] shadow-lg shadow-[#FFD600]/20">4</span>
+                        <div>
+                          <p class="text-[12px] font-extrabold uppercase tracking-[0.2em] text-white">Acompanhamentos</p>
+                          <p class="mt-0.5 text-[11px] text-white/45">Capriche à vontade</p>
+                        </div>
+                      </div>
+                      <div class="mt-4">
+                        <div id="mix-acompanhamentos" class="grid grid-cols-2 gap-3 sm:grid-cols-3"></div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="flex items-center gap-3">
+                        <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#FFD600] text-sm font-extrabold text-[#2D0A31] shadow-lg shadow-[#FFD600]/20">5</span>
+                        <div>
+                          <p class="text-[12px] font-extrabold uppercase tracking-[0.2em] text-white">Calda</p>
+                          <p class="mt-0.5 text-[11px] text-white/45">O toque final</p>
+                        </div>
+                      </div>
+                      <div class="mt-4">
+                        <div id="mix-caldas" class="grid grid-cols-2 gap-3 sm:grid-cols-3"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Resumo -->
+              <div class="reveal" style="--reveal-delay: 0.1s">
+                <div class="lg:sticky lg:top-28">
+                  <div class="overflow-hidden rounded-[2.5rem] border border-white/12 bg-gradient-to-br from-white/[0.12] to-white/[0.04] backdrop-blur-xl">
+                    <div class="flex items-center justify-between border-b border-white/10 px-6 py-5">
+                      <p class="text-[11px] font-extrabold uppercase tracking-[0.22em] text-[#FFD600]">Seu Mix</p>
+                      <button
+                        id="mix-limpar"
+                        class="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-white/55 transition-colors hover:text-white"
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rotate-ccw h-3.5 w-3.5"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
+                        Limpar
+                      </button>
+                    </div>
+
+                    <div id="mix-resumo" class="space-y-3 px-6 py-6"></div>
+
+                    <div class="bg-[#FDF9F2] px-6 py-6">
+                      <div class="mb-5 flex items-center justify-between rounded-2xl bg-white/60 p-3">
+                        <span class="text-[11px] font-extrabold uppercase tracking-[0.22em] text-[#2D0A31]/55">Quantidade</span>
+                        <div class="flex items-center gap-3">
+                          <button
+                            id="mix-qtd-menos"
+                            aria-label="Diminuir quantidade"
+                            class="flex h-8 w-8 items-center justify-center rounded-full bg-[#2D0A31]/8 text-[#2D0A31] transition-colors hover:bg-[#2D0A31]/15"
+                          >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minus h-4 w-4"><path d="M5 12h14"></path></svg>
+                          </button>
+                          <span id="mix-qtd" class="w-8 text-center text-lg font-extrabold text-[#2D0A31]">1</span>
+                          <button
+                            id="mix-qtd-mais"
+                            aria-label="Aumentar quantidade"
+                            class="flex h-8 w-8 items-center justify-center rounded-full bg-[#2D0A31]/8 text-[#2D0A31] transition-colors hover:bg-[#2D0A31]/15"
+                          >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus h-4 w-4"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="flex items-end justify-between">
+                        <div>
+                          <p class="text-[11px] font-extrabold uppercase tracking-[0.22em] text-[#2D0A31]/55">Total estimado</p>
+                          <p id="mix-total" class="text-4xl font-extrabold tracking-tight text-[#FF008A]">R$ 20,00</p>
+                        </div>
+                        <span id="mix-extras" class="rounded-full bg-[#2D0A31]/8 px-3 py-1.5 text-xs font-bold text-[#2D0A31]/70">0 extras</span>
+                      </div>
+
+                      <button
+                        id="mix-add"
+                        class="mt-5 flex w-full items-center justify-center gap-2.5 rounded-full px-6 py-4 text-sm font-extrabold uppercase tracking-wider text-white shadow-xl transition-transform hover:scale-[1.02] bg-[#FF008A] shadow-[#FF008A]/30"
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart h-5 w-5"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
+                        Adicionar ao carrinho
+                      </button>
+
+                      <a
+                        id="mix-whatsapp"
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="mt-3 flex w-full items-center justify-center gap-2.5 rounded-full border border-[#2D0A31]/15 bg-white px-6 py-4 text-sm font-bold uppercase tracking-wider text-[#2D0A31] transition-colors hover:border-[#2D0A31]/30"
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle h-5 w-5"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+                        Pedir pelo WhatsApp
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============================================================
+             A MARCA (números)
+             ============================================================== -->
+        <section class="bg-[#FDF9F2] py-16 sm:py-20">
+          <div class="mx-auto max-w-7xl px-5 sm:px-8">
+            <div class="mx-auto max-w-2xl text-center reveal">
+              <p class="text-[11px] font-extrabold uppercase tracking-[0.3em] text-[#9D00FF]">A marca</p>
+              <h2 class="mt-4 text-[clamp(1.6rem,4vw,2.5rem)] font-extrabold leading-tight tracking-[-0.03em] text-[#2D0A31]">
+                Gigante no sabor. Gigante no Brasil.
+              </h2>
+            </div>
+
+            <div class="mt-12 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+              <div class="reveal">
+                <div class="group relative overflow-hidden rounded-[1.75rem] border border-[#2D0A31]/8 bg-white p-7 text-center shadow-[0_20px_50px_-40px_rgba(45,10,49,0.5)] transition-transform duration-500 hover:-translate-y-2">
+                  <div class="pointer-events-none absolute -right-6 -top-6 h-20 w-20 rounded-full bg-[#FFD600]/20 blur-xl transition-opacity group-hover:opacity-100"></div>
+                  <p class="relative text-[clamp(2.4rem,6vw,3.5rem)] font-extrabold leading-none tracking-tight text-[#FF008A] stat-value">17<span class="text-[#FFD600]"> anos</span></p>
+                  <p class="relative mt-3 text-[13px] font-semibold leading-snug text-[#2D0A31]/65">no mercado desde 2009</p>
+                </div>
+              </div>
+              <div class="reveal" style="--reveal-delay: 0.08s">
+                <div class="group relative overflow-hidden rounded-[1.75rem] border border-[#2D0A31]/8 bg-white p-7 text-center shadow-[0_20px_50px_-40px_rgba(45,10,49,0.5)] transition-transform duration-500 hover:-translate-y-2">
+                  <div class="pointer-events-none absolute -right-6 -top-6 h-20 w-20 rounded-full bg-[#FFD600]/20 blur-xl transition-opacity group-hover:opacity-100"></div>
+                  <p class="relative text-[clamp(2.4rem,6vw,3.5rem)] font-extrabold leading-none tracking-tight text-[#FF008A] stat-value">900<span class="text-[#FFD600]">+</span></p>
+                  <p class="relative mt-3 text-[13px] font-semibold leading-snug text-[#2D0A31]/65">lojas espalhadas pelo Brasil</p>
+                </div>
+              </div>
+              <div class="reveal" style="--reveal-delay: 0.16s">
+                <div class="group relative overflow-hidden rounded-[1.75rem] border border-[#2D0A31]/8 bg-white p-7 text-center shadow-[0_20px_50px_-40px_rgba(45,10,49,0.5)] transition-transform duration-500 hover:-translate-y-2">
+                  <div class="pointer-events-none absolute -right-6 -top-6 h-20 w-20 rounded-full bg-[#FFD600]/20 blur-xl transition-opacity group-hover:opacity-100"></div>
+                  <p class="relative text-[clamp(2.4rem,6vw,3.5rem)] font-extrabold leading-none tracking-tight text-[#FF008A] stat-value">100<span class="text-[#FFD600]">+</span></p>
+                  <p class="relative mt-3 text-[13px] font-semibold leading-snug text-[#2D0A31]/65">produtos no cardápio</p>
+                </div>
+              </div>
+              <div class="reveal" style="--reveal-delay: 0.24s">
+                <div class="group relative overflow-hidden rounded-[1.75rem] border border-[#2D0A31]/8 bg-white p-7 text-center shadow-[0_20px_50px_-40px_rgba(45,10,49,0.5)] transition-transform duration-500 hover:-translate-y-2">
+                  <div class="pointer-events-none absolute -right-6 -top-6 h-20 w-20 rounded-full bg-[#FFD600]/20 blur-xl transition-opacity group-hover:opacity-100"></div>
+                  <p class="relative text-[clamp(2.4rem,6vw,3.5rem)] font-extrabold leading-none tracking-tight text-[#FF008A] stat-value">24<span class="text-[#FFD600]"> estados</span></p>
+                  <p class="relative mt-3 text-[13px] font-semibold leading-snug text-[#2D0A31]/65">mais Distrito Federal</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============================================================
+             ENCONTRE A LOJA
+             ============================================================== -->
+        <section class="relative overflow-hidden bg-white py-24 sm:py-28">
+          <div class="pointer-events-none absolute -left-16 top-10 h-72 w-72 rounded-full bg-[#9D00FF]/15 blur-3xl"></div>
+          <div class="mx-auto max-w-7xl px-5 sm:px-8">
+            <div class="relative overflow-hidden rounded-[2.5rem] border border-[#2D0A31]/10 bg-gradient-to-br from-[#2D0A31] to-[#4a1252] px-6 py-12 sm:px-12 sm:py-14">
+              <div class="pointer-events-none absolute -right-10 -top-10 h-56 w-56 rounded-full bg-[#FF008A]/30 blur-3xl"></div>
+              <div class="pointer-events-none absolute -bottom-12 left-10 h-48 w-48 rounded-[45%_55%_50%_50%/50%_45%_55%_50%] bg-[#FFD600]/20 blur-3xl"></div>
+              <div class="relative flex flex-col items-center gap-8 text-center lg:flex-row lg:items-center lg:justify-between lg:text-left">
+                <div class="max-w-xl">
+                  <div class="inline-flex items-center gap-2 rounded-full border border-[#FFD600]/40 bg-[#FFD600]/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-[#FFD600]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-3.5 w-3.5"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Encontre uma loja
+                  </div>
+                  <h2 class="mt-5 text-[clamp(1.8rem,4.5vw,3rem)] font-extrabold leading-tight tracking-[-0.03em] text-white">
+                    Estamos mais perto do que você imagina.
+                  </h2>
+                  <p class="mt-4 text-[16px] leading-relaxed text-white/70" data-loja="endereco">Del Lago Q 15 Lote 03 - Itapoã, Brasília - DF, 71581-115</p>
+                  <p class="mt-3 inline-flex items-center gap-2 text-[14px] font-semibold text-[#FFD600]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock h-4 w-4"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    Ter a Dom, 10h às 18h • Segunda fechado
+                  </p>
+                </div>
+                <div class="flex flex-col gap-3 sm:flex-row lg:flex-col">
+                  <a
+                    data-loja-href="googleMaps"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group inline-flex items-center justify-center gap-2 rounded-full bg-[#FF008A] px-7 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-xl shadow-[#FF008A]/30 transition-transform hover:scale-105"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-navigation h-4 w-4"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+                    Encontrar agora
+                  </a>
+                  <a
+                    href="#cardapio"
+                    class="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 px-7 py-4 text-sm font-bold uppercase tracking-wider text-white transition-colors hover:border-[#FFD600] hover:text-[#FFD600]"
+                    >Ver cardápio
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-4 w-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============================================================
+             AVALIAÇÕES
+             ============================================================== -->
+        <section id="avaliacoes" class="bg-[#FDF9F2] py-24 sm:py-32">
+          <div class="mx-auto max-w-7xl px-5 sm:px-8">
+            <div class="mx-auto max-w-2xl text-center reveal">
+              <p class="text-[11px] font-extrabold uppercase tracking-[0.3em] text-[#9D00FF]">Avaliações</p>
+              <h2 class="mt-4 text-[clamp(2rem,5vw,3.25rem)] font-extrabold leading-tight tracking-[-0.03em] text-[#2D0A31]">A Mix virou vício.</h2>
+              <div class="mt-6 inline-flex items-center gap-3 rounded-full border border-[#2D0A31]/10 bg-white px-5 py-2.5 shadow-sm">
+                <div class="flex text-[#FFD600]" data-stars="5" data-star-class="h-4 w-4"></div>
+                <span class="text-sm font-extrabold text-[#2D0A31]" data-loja="nota">4.4</span>
+                <span class="text-sm text-[#2D0A31]/50">· <span data-loja="totalAvaliacoes">148</span> avaliações no Google</span>
+              </div>
+            </div>
+
+            <!-- Preenchido por JS a partir de AVALIACOES (em data.js) -->
+            <div id="grade-avaliacoes" class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+
+            <div class="mt-12 text-center reveal">
+              <a
+                data-loja-href="googleMaps"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group inline-flex items-center gap-3 rounded-full bg-[#2D0A31] px-8 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-xl shadow-[#2D0A31]/20 transition-transform hover:scale-105"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-5 w-5 fill-[#FFD600] text-[#FFD600]"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                Avalie-nos no Google
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+              </a>
+              <p class="mt-4 text-[13px] text-[#2D0A31]/50">Sua avaliação ajuda a Milk Shake Mix a crescer 💌</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============================================================
+             CHAMADA FINAL
+             ============================================================== -->
+        <section class="relative overflow-hidden bg-gradient-to-br from-[#9D00FF] via-[#FF008A] to-[#2D0A31] px-5 py-24 sm:px-8 sm:py-32">
+          <div class="pointer-events-none absolute -left-10 top-8 h-56 w-56 rounded-full bg-[#FFD600]/30 blur-3xl"></div>
+          <div class="pointer-events-none absolute right-0 bottom-0 h-72 w-72 rounded-[45%_55%_50%_50%/50%_45%_55%_50%] bg-white/10 blur-2xl"></div>
+          <div class="relative mx-auto max-w-3xl text-center reveal">
+            <h2 class="text-[clamp(2.1rem,6vw,4rem)] font-extrabold leading-[1.03] tracking-[-0.035em] text-white">
+              Bateu a vontade?<span class="mt-2 block text-[#FFD600]">Então não fica só olhando. Vem para a Mix.</span>
+            </h2>
+            <p class="mx-auto mt-6 max-w-xl text-[17px] leading-relaxed text-white/85">
+              Faça seu pedido e transforme seu dia em um dia mais gostoso.
+            </p>
+            <a
+              data-whatsapp-pedido
+              data-origem="cta_final"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-10 py-5 text-sm font-extrabold uppercase tracking-wider text-[#2D0A31] shadow-2xl transition-transform hover:scale-105"
+              >Quero pedir agora
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-4 w-4"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <!-- ================================================================
+           RODAPÉ
+           ================================================================ -->
+      <footer id="contato" class="bg-[#2D0A31] px-5 pt-20 pb-8 sm:px-8">
+        <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+          <div>
+            <div class="flex items-center gap-3">
+              <img src="assets/img/logo.png" alt="Logo Milk Shake Mix" loading="lazy" width="56" height="56" class="h-14 w-14 rounded-full object-cover ring-2 ring-[#FFD600]/70" />
+              <p class="text-base font-bold leading-tight text-white">
+                Milk Shake Mix<span class="block text-[11px] font-normal uppercase tracking-[0.2em] text-[#FFD600]">Sorvetes • Açaí</span>
+              </p>
+            </div>
+            <p class="mt-6 max-w-xs text-lg font-semibold leading-snug text-white/80">Seu momento doce começa aqui.</p>
+          </div>
+
+          <nav aria-label="Navegação do rodapé">
+            <p class="text-[11px] font-extrabold uppercase tracking-[0.22em] text-[#FFD600]">Navegação</p>
+            <ul class="mt-5 space-y-3">
+              <li><a href="#inicio" class="text-sm text-white/70 transition-colors hover:text-white">Início</a></li>
+              <li><a href="#cardapio" class="text-sm text-white/70 transition-colors hover:text-white">Cardápio</a></li>
+              <li><a href="#a-mix" class="text-sm text-white/70 transition-colors hover:text-white">A Mix</a></li>
+              <li><a href="#galeria" class="text-sm text-white/70 transition-colors hover:text-white">Galeria</a></li>
+              <li><a href="#avaliacoes" class="text-sm text-white/70 transition-colors hover:text-white">Avaliações</a></li>
+              <li><a href="#contato" class="text-sm text-white/70 transition-colors hover:text-white">Contato</a></li>
+            </ul>
+          </nav>
+
+          <div>
+            <p class="text-[11px] font-extrabold uppercase tracking-[0.22em] text-[#FFD600]">Atendimento</p>
+            <ul class="mt-5 space-y-3 text-sm text-white/70">
+              <li>
+                <a data-loja-href="tel" href="#" class="inline-flex items-center gap-2 transition-colors hover:text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle h-4 w-4"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+                  <span data-loja="telefone">(61) 99116-9687</span>
+                </a>
+              </li>
+              <li>
+                <a data-whatsapp-pedido data-origem="rodape" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 transition-colors hover:text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle h-4 w-4"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+                  WhatsApp
+                </a>
+              </li>
+              <li>
+                <a data-loja-href="instagram" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 transition-colors hover:text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram h-4 w-4"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+                  <span data-loja="instagramUser">@milkshakemixitapoa_df</span>
+                </a>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock mt-0.5 h-4 w-4 shrink-0"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span><span data-loja="horario">Ter a Dom, 10h às 18h</span> <span class="text-white/40" data-loja="horarioObs">(segunda fechado)</span></span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin mt-0.5 h-4 w-4 shrink-0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span data-loja="endereco">Del Lago Q 15 Lote 03 - Itapoã, Brasília - DF, 71581-115</span>
+              </li>
+            </ul>
+
+            <p class="mt-6 text-[11px] font-extrabold uppercase tracking-[0.22em] text-[#FFD600]">Formas de pagamento</p>
+            <p class="mt-3 flex items-start gap-2 text-sm text-white/70">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wallet mt-0.5 h-4 w-4 shrink-0"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"></path><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"></path></svg>
+              <span data-loja="pagamentos">Pix • Dinheiro • Cartão de Crédito • Cartão de Débito</span>
+            </p>
+          </div>
+
+          <div>
+            <p class="text-[11px] font-extrabold uppercase tracking-[0.22em] text-[#FFD600]">Peça agora</p>
+            <a
+              href="#cardapio"
+              class="mt-5 inline-flex items-center gap-2 rounded-full bg-[#FF008A] px-6 py-3.5 text-[13px] font-bold uppercase tracking-wider text-white shadow-lg shadow-[#FF008A]/30 transition-transform hover:scale-105"
+              >Ver cardápio
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-4 w-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="mx-auto mt-14 max-w-7xl border-t border-white/10 pt-6">
+          <p class="text-center text-xs text-white/50">© 2026 Milk Shake Mix • Sorvetes e Açaí</p>
+        </div>
+      </footer>
+
+      <!-- ================================================================
+           BOTÃO FLUTUANTE DO WHATSAPP
+           ================================================================ -->
+      <a
+        data-whatsapp-pedido
+        data-origem="botao_flutuante"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Pedir pelo WhatsApp"
+        class="group fixed bottom-5 right-5 z-50 flex items-center gap-3"
+      >
+        <span class="pointer-events-none hidden max-w-[200px] rounded-2xl bg-white px-4 py-2.5 text-xs font-semibold text-[#2D0A31] opacity-0 shadow-xl transition-opacity duration-300 group-hover:opacity-100 sm:block">
+          Peça agora e receba em 30 min.
+        </span>
+        <span class="relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl transition-transform duration-300 group-hover:scale-110">
+          <span class="absolute inset-0 animate-ping rounded-full bg-[#25D366]/50"></span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle relative h-7 w-7"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+        </span>
+      </a>
+
+      <!-- ================================================================
+           CARRINHO
+           ================================================================ -->
+      <button
+        id="cart-toggle"
+        aria-label="Abrir carrinho"
+        class="fixed bottom-6 left-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#FF008A] text-white shadow-2xl shadow-[#FF008A]/40 transition-transform hover:scale-110"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag h-6 w-6"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        <span
+          id="cart-badge"
+          hidden
+          class="absolute -right-1 -top-1 flex h-6 min-w-6 items-center justify-center rounded-full bg-[#FFD600] px-1.5 text-xs font-extrabold text-[#2D0A31]"
+        >0</span>
+      </button>
+
+      <div id="cart-overlay" hidden class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm cart-overlay"></div>
+
+      <aside
+        id="cart-panel"
+        hidden
+        aria-label="Carrinho"
+        class="fixed right-0 top-0 z-50 flex h-full w-full max-w-md flex-col bg-[#FDF9F2] shadow-2xl cart-panel"
+      >
+        <div class="flex items-center justify-between border-b border-[#2D0A31]/10 bg-[#2D0A31] px-5 py-5">
+          <div class="flex items-center gap-3 text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag h-5 w-5 text-[#FFD600]"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            <div>
+              <h2 class="text-base font-extrabold leading-none">Seu carrinho</h2>
+              <p id="cart-count" class="mt-1 text-xs text-white/60">0 itens</p>
+            </div>
+          </div>
+          <button
+            id="cart-close"
+            aria-label="Fechar carrinho"
+            class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x h-5 w-5"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+          </button>
+        </div>
+
+        <!-- Estado vazio -->
+        <div id="cart-empty" class="flex flex-1 flex-col items-center justify-center gap-3 px-8 text-center">
+          <div class="flex h-20 w-20 items-center justify-center rounded-full bg-[#FF008A]/10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag h-9 w-9 text-[#FF008A]"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          </div>
+          <p class="text-lg font-bold text-[#2D0A31]">Seu carrinho está vazio</p>
+          <p class="text-sm text-[#2D0A31]/60">Adicione produtos do cardápio e finalize seu pedido pelo WhatsApp.</p>
+          <button
+            id="cart-empty-cta"
+            class="mt-2 rounded-full bg-[#2D0A31] px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-colors hover:bg-[#9D00FF]"
+          >
+            Ver cardápio
+          </button>
+        </div>
+
+        <!-- Lista de itens -->
+        <div id="cart-list" hidden class="flex-1 space-y-3 overflow-y-auto px-5 py-5">
+          <div id="cart-items" class="space-y-3"></div>
+          <button
+            id="cart-clear"
+            class="w-full pt-1 text-center text-xs font-semibold uppercase tracking-wider text-[#2D0A31]/45 transition-colors hover:text-[#FF008A]"
+          >
+            Esvaziar carrinho
+          </button>
+        </div>
+
+        <!-- Rodapé do carrinho -->
+        <div id="cart-footer" hidden class="border-t border-[#2D0A31]/10 bg-white px-5 py-5">
+          <div class="flex items-center justify-between">
+            <span class="text-sm font-semibold text-[#2D0A31]/60">Total</span>
+            <span id="cart-total" class="text-2xl font-extrabold text-[#2D0A31]">R$ 0,00</span>
+          </div>
+          <a
+            id="cart-checkout"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-4 flex w-full items-center justify-center gap-3 rounded-full bg-[#25D366] px-6 py-4 text-sm font-extrabold uppercase tracking-wider text-white shadow-xl shadow-[#25D366]/30 transition-transform hover:scale-[1.02]"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle h-5 w-5"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+            Finalizar pelo WhatsApp
+          </a>
+          <p class="mt-3 text-center text-[11px] text-[#2D0A31]/45">
+            Você será redirecionado ao WhatsApp com seu pedido pronto.
+          </p>
+        </div>
+      </aside>
+
+      <!-- ================================================================
+           LIGHTBOX DA GALERIA
+           ================================================================ -->
+      <div
+        id="lightbox"
+        hidden
+        role="dialog"
+        aria-modal="true"
+        aria-label="Foto ampliada"
+        class="fixed inset-0 z-[60] flex items-center justify-center bg-[#2D0A31]/90 p-4 backdrop-blur-md lightbox"
+      >
+        <button
+          id="lightbox-close"
+          aria-label="Fechar"
+          class="absolute right-5 top-5 flex h-11 w-11 items-center justify-center rounded-full bg-white/15 text-white transition-colors hover:bg-white/25"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x h-5 w-5"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+        </button>
+        <img id="lightbox-img" src="" alt="" class="max-h-[85vh] max-w-[92vw] rounded-3xl object-contain shadow-2xl lightbox-img" />
+      </div>
+    </div>
+
+    <!-- A ordem importa: data.js define os dados, admin-bridge aplica o que
+         foi editado no painel, analytics liga as estatísticas e app.js roda o site. -->
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/admin-bridge.js"></script>
+    <script src="assets/js/analytics.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

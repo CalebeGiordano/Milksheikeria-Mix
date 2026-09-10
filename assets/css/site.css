@@ -1,0 +1,263 @@
+/* ==========================================================================
+   Milkshakeria Mix — animações e ajustes
+   O visual base vem de assets/css/tailwind.css (build original do site).
+   Aqui ficam só as animações que no site original eram feitas em JS
+   (framer-motion) e que aqui são reproduzidas em CSS puro.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   O atributo hidden precisa vencer as classes de display do Tailwind
+   (.flex, .fixed, .grid...), senão elementos escondidos continuam visíveis.
+   -------------------------------------------------------------------------- */
+[hidden] {
+  display: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Reveal: elementos sobem 32px e aparecem quando entram na tela.
+   Equivale a: initial {opacity:0, y:32} -> whileInView {opacity:1, y:0}
+   duração 0.7s, ease cubic-bezier(.22,1,.36,1), dispara uma vez só.
+   -------------------------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0s);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   Hero: a mídia entra com um leve zoom (scale .94 -> 1, 0.9s, delay 0.15s)
+   e o bloco de texto faz um fade lateral.
+   -------------------------------------------------------------------------- */
+@keyframes hero-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes hero-in-media {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.hero-text {
+  animation: hero-in-left 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-media {
+  animation: hero-in-media 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+
+/* --------------------------------------------------------------------------
+   Selos flutuantes do hero: sobem 14px e voltam, em loop.
+   Cada selo tem um atraso diferente (0s, 0.6s e 1.2s), como no original.
+   -------------------------------------------------------------------------- */
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+.float-badge {
+  animation: float-y 5s ease-in-out infinite;
+}
+
+/* O selo "+1.000 momentos doces" já é centralizado com translateX(-50%),
+   então precisa de um keyframe próprio para não perder a centralização. */
+@keyframes float-y-centered {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -14px);
+  }
+}
+
+.float-badge-centered {
+  animation: float-y-centered 5.6s ease-in-out 0.6s infinite;
+}
+
+.float-badge-delay {
+  animation-duration: 6.2s;
+  animation-delay: 1.2s;
+}
+
+/* --------------------------------------------------------------------------
+   Números da seção "A marca": entram com um leve pop (scale .85 -> 1).
+   -------------------------------------------------------------------------- */
+.stat-value {
+  transform: scale(0.85);
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.reveal.is-visible .stat-value {
+  transform: scale(1);
+}
+
+/* --------------------------------------------------------------------------
+   Cartões do cardápio: entram com pop ao aparecer e ao trocar de filtro.
+   -------------------------------------------------------------------------- */
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.card-in {
+  animation: card-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* --------------------------------------------------------------------------
+   Total do montador: pulsa quando o valor muda.
+   -------------------------------------------------------------------------- */
+@keyframes total-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.total-pop {
+  animation: total-pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* --------------------------------------------------------------------------
+   Carrinho lateral: overlay em fade e painel deslizando pela direita.
+   -------------------------------------------------------------------------- */
+.cart-overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cart-overlay.is-open {
+  opacity: 1;
+}
+
+.cart-panel {
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cart-panel.is-open {
+  transform: translateX(0);
+}
+
+@keyframes cart-item-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.cart-item-in {
+  animation: cart-item-in 0.3s ease both;
+}
+
+/* --------------------------------------------------------------------------
+   Lightbox da galeria: fundo em fade e foto entrando com um leve zoom.
+   -------------------------------------------------------------------------- */
+.lightbox {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox.is-open {
+  opacity: 1;
+}
+
+.lightbox .lightbox-img {
+  transform: scale(0.9);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: default;
+}
+
+.lightbox.is-open .lightbox-img {
+  transform: scale(1);
+}
+
+/* --------------------------------------------------------------------------
+   Toque: no celular e no tablet alguns controles do "Monte seu Mix" ficavam
+   menores que os ~44px recomendados para o dedo. Aqui eles crescem sem mudar
+   o visual no computador.
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px), (pointer: coarse) {
+  /* Mais e menos da quantidade: eram 32x32. */
+  #mix-qtd-menos,
+  #mix-qtd-mais {
+    height: 42px;
+    width: 42px;
+  }
+
+  /* "Limpar" tinha só 17px de altura clicável. A margem negativa
+     compensa o padding para o layout continuar igual. */
+  #mix-limpar {
+    padding: 11px 12px;
+    margin: -11px -12px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Respeita quem prefere menos movimento.
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .hero-text,
+  .hero-media,
+  .float-badge,
+  .float-badge-centered,
+  .card-in,
+  .total-pop,
+  .cart-item-in,
+  .lightbox,
+  .lightbox .lightbox-img {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .float-badge-centered {
+    transform: translateX(-50%) !important;
+  }
+
+  .cart-panel {
+    transition: none;
+  }
+}
